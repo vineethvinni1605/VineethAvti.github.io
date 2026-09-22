@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Oscar Intelligence | Vineeth Avti
+    </title>
+
+    <meta
+        name="description"
+        content="Machine learning case study exploring patterns associated with major Academy Award winners."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="case-study-page">
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav class="case-nav">
+
+    <a href="../index.html" class="case-logo">
+        VA<span>.</span>
+    </a>
+
+    <a href="../index.html#projects" class="back-link">
+        ← BACK TO PROJECTS
+    </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- =====================================
+     CASE STUDY HERO
+===================================== -->
+
+<section class="case-hero">
+
+    <div class="case-eyebrow">
+        01 / MACHINE LEARNING CASE STUDY
+    </div>
+
+
+    <h1>
+        Oscar
+        <span>Intelligence.</span>
+    </h1>
+
+
+    <p class="case-subtitle">
+        Exploring whether financial, audience,
+        categorical and text-derived signals can
+        help identify patterns associated with
+        major Academy Award winners.
+    </p>
+
+
+    <div class="case-metrics">
+
+        <div>
+            <strong>972K+</strong>
+            <span>FILMS</span>
+        </div>
+
+        <div>
+            <strong>4</strong>
+            <span>ML MODELS</span>
+        </div>
+
+        <div>
+            <strong>5</strong>
+            <span>FOLD CV</span>
+        </div>
+
+        <div>
+            <strong>30</strong>
+            <span>DATA FIELDS</span>
+        </div>
+
+    </div>
+
+
+    <div class="case-tech">
+
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>Scikit-learn</span>
+        <span>NLP</span>
+        <span>Machine Learning</span>
+        <span>Tableau</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PROJECT OVERVIEW
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        01
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            THE PROBLEM
+        </p>
+
+        <h2>
+            What signals are associated
+            with an Oscar-winning film?
+        </h2>
+
+        <p>
+            Award outcomes are influenced by a complex
+            combination of audience reception, financial
+            performance, genre, timing and other factors.
+            This project explored whether those signals
+            could be transformed into measurable features
+            for machine learning analysis.
+        </p>
+
+        <p>
+            The goal was not simply to build a classifier,
+            but to understand which characteristics were
+            most informative and whether those relationships
+            changed across time and award categories.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     DATA
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        02
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            THE DATA
+        </p>
+
+        <h2>
+            Combining nearly a million
+            film records with Oscar history.
+        </h2>
+
+        <p>
+            The analytical dataset combined movie metadata
+            with historical Academy Award information.
+            After cleaning and integration, the dataset
+            contained approximately 972,435 films and
+            30 analytical fields.
+        </p>
+
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>972,435</strong>
+                <span>CLEANED FILMS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>859</strong>
+                <span>IDENTIFIED WINNERS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>30</strong>
+                <span>FEATURE FIELDS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>1927–2024</strong>
+                <span>OSCAR HISTORY</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FEATURE ENGINEERING
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        03
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            FEATURE ENGINEERING
+        </p>
+
+        <h2>
+            Turning raw movie metadata
+            into predictive signals.
+        </h2>
+
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Financial</h3>
+                <p>
+                    Budget, revenue and return
+                    on investment.
+                </p>
+            </div>
+
+
+            <div>
+                <span>02</span>
+                <h3>Audience</h3>
+                <p>
+                    Vote average, vote count
+                    and popularity.
+                </p>
+            </div>
+
+
+            <div>
+                <span>03</span>
+                <h3>Context</h3>
+                <p>
+                    Genre, release year and
+                    release decade.
+                </p>
+            </div>
+
+
+            <div>
+                <span>04</span>
+                <h3>Text</h3>
+                <p>
+                    Sentiment derived from
+                    movie overview text.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     MODELING
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        04
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            MODELING
+        </p>
+
+        <h2>
+            Four models.
+            One comparative framework.
+        </h2>
+
+
+        <div class="model-grid">
+
+            <div class="model-card">
+
+                <span>MODEL 01</span>
+
+                <h3>
+                    Logistic Regression
+                </h3>
+
+                <p>
+                    Baseline linear classification model.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>MODEL 02</span>
+
+                <h3>
+                    Random Forest
+                </h3>
+
+                <p>
+                    Ensemble model for nonlinear
+                    feature relationships.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>MODEL 03</span>
+
+                <h3>
+                    Support Vector Machine
+                </h3>
+
+                <p>
+                    RBF-based classification
+                    approach.
+                </p>
+
+            </div>
+
+
+            <div class="model-card highlight-model">
+
+                <span>MODEL 04</span>
+
+                <h3>
+                    Gradient Boosting
+                </h3>
+
+                <p>
+                    Strongest overall model in
+                    the comparative evaluation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="method-note">
+            Evaluation included five-fold cross-validation,
+            class-imbalance handling and comparison across
+            accuracy, precision, recall and F1-score.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     RESULTS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        05
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            RESULTS
+        </p>
+
+        <h2>
+            The strongest signals weren't
+            necessarily the obvious ones.
+        </h2>
+
+
+        <div class="insight-list">
+
+            <div class="insight-item">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Audience engagement mattered.</h3>
+
+                    <p>
+                        Vote count emerged as one of the
+                        strongest predictors, with popularity
+                        also contributing meaningful signal.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="insight-item">
+
+                <span>02</span>
+
+                <div>
+                    <h3>Genre carried information.</h3>
+
+                    <p>
+                        Documentary and animation-related
+                        categories showed notable predictive
+                        relationships.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="insight-item">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Financial scale wasn't everything.</h3>
+
+                    <p>
+                        ROI contributed to the models but
+                        played a smaller role than audience
+                        engagement signals.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="insight-item">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Text added incremental signal.</h3>
+
+                    <p>
+                        Sentiment derived from movie descriptions
+                        provided a smaller but useful additional
+                        feature.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PIPELINE
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        06
+    </div>
+
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            END-TO-END WORKFLOW
+        </p>
+
+        <h2>
+            From raw records
+            to interpretable results.
+        </h2>
+
+
+        <div class="case-pipeline">
+
+            <div>
+                <span>01</span>
+                DATA INPUT
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>02</span>
+                CLEAN + MERGE
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>03</span>
+                FEATURES
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>04</span>
+                MODEL
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>05</span>
+                EVALUATE
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>06</span>
+                VISUALIZE
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     NEXT PROJECT
+===================================== -->
+
+<section class="next-project">
+
+    <p>
+        NEXT SYSTEM
+    </p>
+
+    <h2>
+        Transaction
+        <span>Intelligence →</span>
+    </h2>
+
+    <p class="next-status">
+        Currently in development.
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer class="case-footer">
+
+    <p>
+        © 2026 Vineeth Avti
+    </p>
+
+    <a href="../index.html">
+        BACK HOME ↑
+    </a>
+
+</footer>
+
+
+</body>
+
+</html>
