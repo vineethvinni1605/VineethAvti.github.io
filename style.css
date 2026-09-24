@@ -2714,3 +2714,20 @@ body {
     }
 
 }
+
+.education-project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00c2ff;
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.education-project-link:hover {
+    opacity: 0.75;
+    transform: translateX(4px);
+}
