@@ -1,29 +1,31 @@
-/* =====================================
-   SCROLL REVEAL
-===================================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-const revealElements = document.querySelectorAll(
-    ".build-section, .projects-section, .experience-section, .process-section, .skills-section, .education-section, .contact-section"
-);
+    const revealElements = document.querySelectorAll(
+        "section"
+    );
 
-revealElements.forEach((element) => {
-    element.classList.add("reveal");
-});
+    revealElements.forEach((element) => {
+        element.classList.add("reveal");
+    });
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.12
-    }
-);
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
 
-revealElements.forEach((element) => {
-    revealObserver.observe(element);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    revealObserver.unobserve(entry.target);
+                }
+
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+
 });

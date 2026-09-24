@@ -2738,10 +2738,10 @@ body {
 
 .reveal {
     opacity: 0;
-    transform: translateY(35px);
+    transform: translateY(70px);
     transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+        opacity 1.2s ease,
+        transform 1.2s ease;
 }
 
 .reveal.active {
