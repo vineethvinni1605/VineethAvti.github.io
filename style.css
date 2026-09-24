@@ -2740,8 +2740,8 @@ body {
     opacity: 0;
     transform: translateY(70px);
     transition:
-        opacity 3.1s ease,
-        transform 3.1s ease;
+        opacity 0.75s ease,
+        transform 0.75s ease;
 }
 
 .reveal.active {
