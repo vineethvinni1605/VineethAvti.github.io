@@ -66,6 +66,7 @@
         associated with major Academy Award winners.
     </p>
 
+
     <div class="case-metrics">
 
         <div>
@@ -90,6 +91,7 @@
 
     </div>
 
+
     <div class="case-tech">
 
         <span>Python</span>
@@ -107,7 +109,7 @@
 
 
 <!-- =====================================
-     PROJECT OVERVIEW
+     01 — PROJECT OVERVIEW
 ===================================== -->
 
 <section class="case-section">
@@ -150,7 +152,7 @@
 
 
 <!-- =====================================
-     DATA
+     02 — DATA
 ===================================== -->
 
 <section class="case-section">
@@ -185,6 +187,7 @@
             were retained for the modeling analysis.
         </p>
 
+
         <div class="data-stat-grid">
 
             <div class="data-stat">
@@ -216,7 +219,7 @@
 
 
 <!-- =====================================
-     FEATURE ENGINEERING
+     03 — FEATURE ENGINEERING
 ===================================== -->
 
 <section class="case-section">
@@ -236,20 +239,26 @@
             into interpretable predictive signals.
         </h2>
 
+
         <div class="feature-grid">
 
             <div>
                 <span>01</span>
+
                 <h3>Financial</h3>
+
                 <p>
                     Budget, revenue and return
                     on investment (ROI).
                 </p>
             </div>
 
+
             <div>
                 <span>02</span>
+
                 <h3>Audience</h3>
+
                 <p>
                     Vote average, vote count,
                     popularity and log-transformed
@@ -257,18 +266,24 @@
                 </p>
             </div>
 
+
             <div>
                 <span>03</span>
+
                 <h3>Context</h3>
+
                 <p>
                     Main genre, award category,
                     release year and release decade.
                 </p>
             </div>
 
+
             <div>
                 <span>04</span>
+
                 <h3>Text</h3>
+
                 <p>
                     Sentiment polarity derived
                     from movie overview text.
@@ -276,6 +291,7 @@
             </div>
 
         </div>
+
 
         <p class="method-note">
             Engineered features included ROI, log popularity,
@@ -287,84 +303,10 @@
 
 </section>
 
-<!-- =====================================
-     EXPLORATORY ANALYSIS
-===================================== -->
 
-<section class="case-section">
-
-    <div class="case-section-number">
-        04
-    </div>
-
-    <div class="case-section-content">
-
-        <p class="case-label">
-            EXPLORATORY ANALYSIS
-        </p>
-
-        <h2>
-            Understanding the structure
-            behind the data.
-        </h2>
-
-        <p>
-            Exploratory analysis was used to examine relationships
-            between financial performance, audience engagement,
-            popularity and other numerical variables before modeling.
-        </p>
-
-        <div class="case-visual">
-
-            <img
-                src="../assets/projects/oscar/correlation-heatmap.jpg"
-                alt="Correlation heatmap of numerical movie features"
-                loading="lazy"
-            >
-
-            <div class="visual-caption">
-                <span>01 / CORRELATION ANALYSIS</span>
-
-                <p>
-                    Vote count and popularity showed a strong positive
-                    relationship, while budget and revenue were also
-                    strongly associated. ROI and sentiment showed much
-                    weaker linear relationships with the other numerical
-                    variables.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="case-visual">
-
-            <img
-                src="../assets/projects/oscar/Budget vs Revenue of Oscar-Winning Films.jpg"
-                alt="Budget versus revenue scatter plot for Oscar-winning films"
-                loading="lazy"
-            >
-
-            <div class="visual-caption">
-                <span>02 / FINANCIAL LANDSCAPE</span>
-
-                <p>
-                    Budget and revenue varied substantially across
-                    Oscar-winning films. The visualization also reveals
-                    high-revenue outliers and variation across genres,
-                    illustrating why financial scale alone cannot explain
-                    award outcomes.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 <!-- =====================================
-     MODELING
+     04 — MODELING
 ===================================== -->
 
 <section class="case-section">
@@ -383,6 +325,7 @@
             Four models.
             One comparative framework.
         </h2>
+
 
         <div class="model-grid">
 
@@ -452,6 +395,7 @@
 
         </div>
 
+
         <p class="method-note">
             Model evaluation used accuracy, precision, recall,
             F1-score and five-fold cross-validation. Because
@@ -464,14 +408,16 @@
 
 </section>
 
+
+
 <!-- =====================================
-     FEATURE IMPORTANCE
+     05 — MODEL INTERPRETABILITY
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        08
+        05
     </div>
 
     <div class="case-section-content">
@@ -481,53 +427,40 @@
         </p>
 
         <h2>
-            What did the Random Forest
+            What did the models
             pay attention to?
         </h2>
 
         <p>
-            Feature importance was examined to understand how individual
-            models used the available signals. In the Random Forest model,
-            financial variables ranked highly alongside audience-engagement
+            Feature importance was examined to understand how
+            individual models used the available signals.
+            Financial variables ranked highly within the
+            Random Forest model alongside audience-engagement
             features such as vote count, vote average and popularity.
         </p>
 
-        <div class="case-visual">
-
-            <img
-                src="../assets/projects/oscar/random-forest-feature-importance.jpg"
-                alt="Random Forest feature importance ranking"
-                loading="lazy"
-            >
-
-            <div class="visual-caption">
-
-                <span>03 / RANDOM FOREST FEATURE IMPORTANCE</span>
-
-                <p>
-                    Revenue and budget received the highest importance
-                    within this Random Forest model, followed by vote count,
-                    vote average and popularity. This model-specific view
-                    complements the broader feature analysis conducted
-                    across the project.
-                </p>
-
-            </div>
-
-        </div>
+        <p class="method-note">
+            Revenue and budget received high importance within
+            the Random Forest model, while the broader project
+            analysis also identified audience engagement,
+            popularity, genre and temporal information as
+            meaningful predictive signals.
+        </p>
 
     </div>
 
 </section>
 
+
+
 <!-- =====================================
-     CATEGORY ANALYSIS
+     06 — CATEGORY ANALYSIS
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        05
+        06
     </div>
 
     <div class="case-section-content">
@@ -541,20 +474,26 @@
             across award categories.
         </h2>
 
+
         <div class="feature-grid">
 
             <div>
                 <span>01</span>
+
                 <h3>Acting</h3>
+
                 <p>
                     Acting categories demonstrated
                     strong predictive performance.
                 </p>
             </div>
 
+
             <div>
                 <span>02</span>
+
                 <h3>Technical</h3>
+
                 <p>
                     Technical categories showed
                     consistent patterns across numerical
@@ -562,9 +501,12 @@
                 </p>
             </div>
 
+
             <div>
                 <span>03</span>
+
                 <h3>Writing</h3>
+
                 <p>
                     Writing categories provided another
                     perspective on category-specific
@@ -572,9 +514,12 @@
                 </p>
             </div>
 
+
             <div>
                 <span>04</span>
+
                 <h3>Short / Documentary</h3>
+
                 <p>
                     Smaller sample sizes made these
                     categories more difficult to predict.
@@ -590,13 +535,13 @@
 
 
 <!-- =====================================
-     RESULTS
+     07 — KEY FINDINGS
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        06
+        07
     </div>
 
     <div class="case-section-content">
@@ -607,8 +552,9 @@
 
         <h2>
             Audience engagement emerged
-            as the strongest signal.
+            as an important signal.
         </h2>
+
 
         <div class="insight-list">
 
@@ -617,13 +563,17 @@
                 <span>01</span>
 
                 <div>
-                    <h3>Vote count led the model.</h3>
+
+                    <h3>
+                        Vote count carried strong signal.
+                    </h3>
 
                     <p>
-                        Vote count emerged as the strongest
-                        overall predictor, reflecting long-term
-                        audience engagement and film visibility.
+                        Vote count emerged as an important
+                        predictor, reflecting long-term audience
+                        engagement and film visibility.
                     </p>
+
                 </div>
 
             </div>
@@ -634,7 +584,10 @@
                 <span>02</span>
 
                 <div>
-                    <h3>Popularity and genre mattered.</h3>
+
+                    <h3>
+                        Popularity and genre mattered.
+                    </h3>
 
                     <p>
                         Popularity and main genre carried meaningful
@@ -642,6 +595,7 @@
                         and Animation showing particularly
                         strong patterns.
                     </p>
+
                 </div>
 
             </div>
@@ -652,13 +606,17 @@
                 <span>03</span>
 
                 <div>
-                    <h3>Financial scale wasn't everything.</h3>
+
+                    <h3>
+                        Financial scale wasn't everything.
+                    </h3>
 
                     <p>
                         ROI contributed to prediction but played
-                        a smaller role than audience-engagement
+                        a smaller role than several audience-engagement
                         measures such as vote count and popularity.
                     </p>
+
                 </div>
 
             </div>
@@ -669,13 +627,17 @@
                 <span>04</span>
 
                 <div>
-                    <h3>Time changed the pattern.</h3>
+
+                    <h3>
+                        Time changed the pattern.
+                    </h3>
 
                     <p>
                         Release decade captured shifts in winning
                         patterns across different periods of
                         Academy Award history.
                     </p>
+
                 </div>
 
             </div>
@@ -686,13 +648,17 @@
                 <span>05</span>
 
                 <div>
-                    <h3>Text added incremental signal.</h3>
+
+                    <h3>
+                        Text added incremental signal.
+                    </h3>
 
                     <p>
                         Sentiment derived from movie overviews
                         provided a smaller but useful contribution
                         alongside numerical and categorical features.
                     </p>
+
                 </div>
 
             </div>
@@ -706,13 +672,13 @@
 
 
 <!-- =====================================
-     MODEL PERFORMANCE
+     08 — MODEL PERFORMANCE
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        07
+        08
     </div>
 
     <div class="case-section-content">
@@ -751,54 +717,16 @@
 
 </section>
 
-<div class="case-visual">
 
-    <div class="visual-caption">
-        <span>04 / CLASSIFICATION PERFORMANCE</span>
-
-        <p>
-            Confusion matrices provided a more detailed view of
-            classification behavior by showing correct predictions
-            alongside false positives and false negatives.
-        </p>
-    </div>
-
-    <div class="visual-grid">
-
-        <figure>
-            <img
-                src="../assets/projects/oscar/confusion-logistic.jpg"
-                alt="Logistic Regression confusion matrix"
-                loading="lazy"
-            >
-            <figcaption>
-                LOGISTIC REGRESSION
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img
-                src="../assets/projects/oscar/confusion-random-forest.jpg"
-                alt="Random Forest confusion matrix"
-                loading="lazy"
-            >
-            <figcaption>
-                RANDOM FOREST
-            </figcaption>
-        </figure>
-
-    </div>
-
-</div>
 
 <!-- =====================================
-     PIPELINE
+     09 — END-TO-END WORKFLOW
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        08
+        09
     </div>
 
     <div class="case-section-content">
@@ -811,6 +739,7 @@
             From raw records
             to interpretable results.
         </h2>
+
 
         <div class="case-pipeline">
 
@@ -863,13 +792,13 @@
 
 
 <!-- =====================================
-     LIMITATIONS
+     10 — LIMITATIONS
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        09
+        10
     </div>
 
     <div class="case-section-content">
@@ -905,13 +834,13 @@
 
 
 <!-- =====================================
-     NEXT STEPS
+     11 — NEXT STEPS
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        10
+        11
     </div>
 
     <div class="case-section-content">
@@ -969,6 +898,11 @@
 
 </main>
 
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
 
 <footer class="case-footer">
 
