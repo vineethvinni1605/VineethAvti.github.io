@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="Machine learning case study exploring patterns associated with major Academy Award winners."
+        content="Machine learning case study exploring financial, audience, categorical and text-derived patterns associated with major Academy Award winners."
     >
 
     <link rel="stylesheet" href="../style.css">
@@ -55,26 +55,27 @@
         01 / MACHINE LEARNING CASE STUDY
     </div>
 
-
     <h1>
         Oscar
         <span>Intelligence.</span>
     </h1>
 
-
     <p class="case-subtitle">
-        Exploring whether financial, audience,
-        categorical and text-derived signals can
-        help identify patterns associated with
-        major Academy Award winners.
+        Exploring whether financial, audience, categorical
+        and text-derived signals can reveal meaningful patterns
+        associated with major Academy Award winners.
     </p>
-
 
     <div class="case-metrics">
 
         <div>
             <strong>972K+</strong>
-            <span>FILMS</span>
+            <span>CLEANED FILMS</span>
+        </div>
+
+        <div>
+            <strong>324</strong>
+            <span>MODELING RECORDS</span>
         </div>
 
         <div>
@@ -83,17 +84,11 @@
         </div>
 
         <div>
-            <strong>5</strong>
-            <span>FOLD CV</span>
-        </div>
-
-        <div>
-            <strong>30</strong>
-            <span>DATA FIELDS</span>
+            <strong>~75%</strong>
+            <span>BEST PERFORMANCE</span>
         </div>
 
     </div>
-
 
     <div class="case-tech">
 
@@ -101,6 +96,7 @@
         <span>Pandas</span>
         <span>Scikit-learn</span>
         <span>NLP</span>
+        <span>SMOTE</span>
         <span>Machine Learning</span>
         <span>Tableau</span>
 
@@ -120,7 +116,6 @@
         01
     </div>
 
-
     <div class="case-section-content">
 
         <p class="case-label">
@@ -133,19 +128,19 @@
         </h2>
 
         <p>
-            Award outcomes are influenced by a complex
-            combination of audience reception, financial
-            performance, genre, timing and other factors.
-            This project explored whether those signals
-            could be transformed into measurable features
-            for machine learning analysis.
+            Academy Award outcomes reflect a complex combination
+            of audience engagement, financial performance, genre,
+            release timing and other characteristics. This project
+            investigated whether those signals could be transformed
+            into measurable features for machine learning analysis.
         </p>
 
         <p>
-            The goal was not simply to build a classifier,
-            but to understand which characteristics were
-            most informative and whether those relationships
-            changed across time and award categories.
+            The objective was not only to classify potential winners,
+            but also to understand which characteristics carried the
+            strongest predictive signal, how those relationships
+            changed over time and whether patterns differed across
+            major award categories.
         </p>
 
     </div>
@@ -164,7 +159,6 @@
         02
     </div>
 
-
     <div class="case-section-content">
 
         <p class="case-label">
@@ -172,18 +166,24 @@
         </p>
 
         <h2>
-            Combining nearly a million
-            film records with Oscar history.
+            Combining large-scale movie data
+            with decades of Oscar history.
         </h2>
 
         <p>
-            The analytical dataset combined movie metadata
-            with historical Academy Award information.
-            After cleaning and integration, the dataset
-            contained approximately 972,435 films and
-            30 analytical fields.
+            The project combined TMDB movie metadata with historical
+            Academy Award records covering 1927–2024. After cleaning,
+            title standardization, duplicate removal and integration,
+            the analytical dataset contained 972,435 film records
+            across 30 fields.
         </p>
 
+        <p>
+            A total of 859 Oscar-winning films were identified.
+            After filtering records with missing financial,
+            engagement or category information, 324 complete records
+            were retained for the modeling analysis.
+        </p>
 
         <div class="data-stat-grid">
 
@@ -194,12 +194,12 @@
 
             <div class="data-stat">
                 <strong>859</strong>
-                <span>IDENTIFIED WINNERS</span>
+                <span>WINNERS IDENTIFIED</span>
             </div>
 
             <div class="data-stat">
-                <strong>30</strong>
-                <span>FEATURE FIELDS</span>
+                <strong>324</strong>
+                <span>MODELING RECORDS</span>
             </div>
 
             <div class="data-stat">
@@ -225,7 +225,6 @@
         03
     </div>
 
-
     <div class="case-section-content">
 
         <p class="case-label">
@@ -234,9 +233,8 @@
 
         <h2>
             Turning raw movie metadata
-            into predictive signals.
+            into interpretable predictive signals.
         </h2>
-
 
         <div class="feature-grid">
 
@@ -245,41 +243,45 @@
                 <h3>Financial</h3>
                 <p>
                     Budget, revenue and return
-                    on investment.
+                    on investment (ROI).
                 </p>
             </div>
-
 
             <div>
                 <span>02</span>
                 <h3>Audience</h3>
                 <p>
-                    Vote average, vote count
-                    and popularity.
+                    Vote average, vote count,
+                    popularity and log-transformed
+                    engagement measures.
                 </p>
             </div>
-
 
             <div>
                 <span>03</span>
                 <h3>Context</h3>
                 <p>
-                    Genre, release year and
-                    release decade.
+                    Main genre, award category,
+                    release year and release decade.
                 </p>
             </div>
-
 
             <div>
                 <span>04</span>
                 <h3>Text</h3>
                 <p>
-                    Sentiment derived from
-                    movie overview text.
+                    Sentiment polarity derived
+                    from movie overview text.
                 </p>
             </div>
 
         </div>
+
+        <p class="method-note">
+            Engineered features included ROI, log popularity,
+            log vote count, release decade, simplified main genre,
+            sentiment score and a binary winner indicator.
+        </p>
 
     </div>
 
@@ -297,7 +299,6 @@
         04
     </div>
 
-
     <div class="case-section-content">
 
         <p class="case-label">
@@ -308,7 +309,6 @@
             Four models.
             One comparative framework.
         </h2>
-
 
         <div class="model-grid">
 
@@ -321,7 +321,8 @@
                 </h3>
 
                 <p>
-                    Baseline linear classification model.
+                    Interpretable linear baseline for
+                    classification and probability estimation.
                 </p>
 
             </div>
@@ -336,8 +337,8 @@
                 </h3>
 
                 <p>
-                    Ensemble model for nonlinear
-                    feature relationships.
+                    Ensemble approach for modeling nonlinear
+                    relationships and examining feature importance.
                 </p>
 
             </div>
@@ -352,8 +353,8 @@
                 </h3>
 
                 <p>
-                    RBF-based classification
-                    approach.
+                    RBF-based classification approach for
+                    identifying complex decision boundaries.
                 </p>
 
             </div>
@@ -368,20 +369,91 @@
                 </h3>
 
                 <p>
-                    Strongest overall model in
-                    the comparative evaluation.
+                    Delivered the strongest overall performance,
+                    reaching approximately 75% accuracy and
+                    75% F1-score.
                 </p>
 
             </div>
 
         </div>
 
-
         <p class="method-note">
-            Evaluation included five-fold cross-validation,
-            class-imbalance handling and comparison across
-            accuracy, precision, recall and F1-score.
+            Model evaluation used accuracy, precision, recall,
+            F1-score and five-fold cross-validation. Because
+            Oscar winners represented only about 0.09% of the
+            overall film data, class weights, category filtering
+            and SMOTE were used to address severe class imbalance.
         </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CATEGORY ANALYSIS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        05
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            CATEGORY ANALYSIS
+        </p>
+
+        <h2>
+            Predictive patterns changed
+            across award categories.
+        </h2>
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Acting</h3>
+                <p>
+                    Acting categories demonstrated
+                    strong predictive performance.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Technical</h3>
+                <p>
+                    Technical categories showed
+                    consistent patterns across numerical
+                    and audience-engagement features.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Writing</h3>
+                <p>
+                    Writing categories provided another
+                    perspective on category-specific
+                    predictive relationships.
+                </p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>Short / Documentary</h3>
+                <p>
+                    Smaller sample sizes made these
+                    categories more difficult to predict.
+                </p>
+            </div>
+
+        </div>
 
     </div>
 
@@ -396,21 +468,19 @@
 <section class="case-section">
 
     <div class="case-section-number">
-        05
+        06
     </div>
-
 
     <div class="case-section-content">
 
         <p class="case-label">
-            RESULTS
+            KEY FINDINGS
         </p>
 
         <h2>
-            The strongest signals weren't
-            necessarily the obvious ones.
+            Audience engagement emerged
+            as the strongest signal.
         </h2>
-
 
         <div class="insight-list">
 
@@ -419,12 +489,12 @@
                 <span>01</span>
 
                 <div>
-                    <h3>Audience engagement mattered.</h3>
+                    <h3>Vote count led the model.</h3>
 
                     <p>
-                        Vote count emerged as one of the
-                        strongest predictors, with popularity
-                        also contributing meaningful signal.
+                        Vote count emerged as the strongest
+                        overall predictor, reflecting long-term
+                        audience engagement and film visibility.
                     </p>
                 </div>
 
@@ -436,12 +506,13 @@
                 <span>02</span>
 
                 <div>
-                    <h3>Genre carried information.</h3>
+                    <h3>Popularity and genre mattered.</h3>
 
                     <p>
-                        Documentary and animation-related
-                        categories showed notable predictive
-                        relationships.
+                        Popularity and main genre carried meaningful
+                        predictive information, with Documentary
+                        and Animation showing particularly
+                        strong patterns.
                     </p>
                 </div>
 
@@ -456,9 +527,9 @@
                     <h3>Financial scale wasn't everything.</h3>
 
                     <p>
-                        ROI contributed to the models but
-                        played a smaller role than audience
-                        engagement signals.
+                        ROI contributed to prediction but played
+                        a smaller role than audience-engagement
+                        measures such as vote count and popularity.
                     </p>
                 </div>
 
@@ -470,12 +541,29 @@
                 <span>04</span>
 
                 <div>
+                    <h3>Time changed the pattern.</h3>
+
+                    <p>
+                        Release decade captured shifts in winning
+                        patterns across different periods of
+                        Academy Award history.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="insight-item">
+
+                <span>05</span>
+
+                <div>
                     <h3>Text added incremental signal.</h3>
 
                     <p>
-                        Sentiment derived from movie descriptions
-                        provided a smaller but useful additional
-                        feature.
+                        Sentiment derived from movie overviews
+                        provided a smaller but useful contribution
+                        alongside numerical and categorical features.
                     </p>
                 </div>
 
@@ -490,15 +578,62 @@
 
 
 <!-- =====================================
+     MODEL PERFORMANCE
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        07
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            MODEL PERFORMANCE
+        </p>
+
+        <h2>
+            Ensemble methods captured
+            the complexity most effectively.
+        </h2>
+
+        <p>
+            Gradient Boosting achieved the strongest overall
+            performance at approximately 75% accuracy and
+            75% F1-score. Random Forest also demonstrated
+            strong and stable performance.
+        </p>
+
+        <p>
+            Logistic Regression and Support Vector Machine
+            provided useful comparison baselines but were less
+            effective at capturing the nonlinear relationships
+            present across financial, audience, temporal and
+            categorical features.
+        </p>
+
+        <p class="method-note">
+            Cross-validation results were also examined separately
+            to evaluate model stability and generalization rather
+            than relying on a single performance measure.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
      PIPELINE
 ===================================== -->
 
 <section class="case-section">
 
     <div class="case-section-number">
-        06
+        08
     </div>
-
 
     <div class="case-section-content">
 
@@ -510,7 +645,6 @@
             From raw records
             to interpretable results.
         </h2>
-
 
         <div class="case-pipeline">
 
@@ -530,31 +664,114 @@
 
             <div>
                 <span>03</span>
-                FEATURES
+                ENGINEER
             </div>
 
             <i>→</i>
 
             <div>
                 <span>04</span>
-                MODEL
+                BALANCE
             </div>
 
             <i>→</i>
 
             <div>
                 <span>05</span>
-                EVALUATE
+                MODEL
             </div>
 
             <i>→</i>
 
             <div>
                 <span>06</span>
-                VISUALIZE
+                EVALUATE
             </div>
 
         </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     LIMITATIONS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        09
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            LIMITATIONS
+        </p>
+
+        <h2>
+            Prediction cannot capture
+            every dimension of creative success.
+        </h2>
+
+        <p>
+            The analysis was constrained by missing financial
+            information for older films, inconsistent genre labels,
+            limited samples in some award categories and the
+            limitations of sentiment derived from short movie
+            descriptions.
+        </p>
+
+        <p>
+            The models identify statistical patterns rather than
+            deterministic rules. Artistic judgment and other
+            qualitative influences on Academy Award outcomes are
+            not fully represented by the available features.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     NEXT STEPS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        10
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            NEXT STEPS
+        </p>
+
+        <h2>
+            Extending the system beyond
+            the initial modeling framework.
+        </h2>
+
+        <p>
+            Future iterations could incorporate critic-review
+            datasets, richer NLP features such as topic modeling
+            and emotion detection, and a prediction API for
+            evaluating new movie inputs.
+        </p>
+
+        <p>
+            These additions could provide richer textual context
+            while creating a more interactive system for exploring
+            the relationship between film characteristics and
+            historical award outcomes.
+        </p>
 
     </div>
 
