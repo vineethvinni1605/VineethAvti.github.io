@@ -20,6 +20,7 @@
 
 <body class="case-study-page">
 
+
 <!-- =====================================
      NAVIGATION
 ===================================== -->
@@ -38,6 +39,7 @@
 
 
 <main>
+
 
 <!-- =====================================
      CASE STUDY HERO
@@ -59,6 +61,7 @@
         and text-derived signals can reveal meaningful patterns
         associated with major Academy Award winners.
     </p>
+
 
     <div class="case-metrics">
 
@@ -145,7 +148,7 @@
 
 
 <!-- =====================================
-     02 — DATA
+     02 — THE DATA
 ===================================== -->
 
 <section class="case-section">
@@ -332,7 +335,7 @@
 
             <img
                 src="../assets/projects/oscar/correlation-heatmap.jpg"
-                alt="Correlation heatmap of numerical movie features"
+                alt="Correlation heatmap of numerical movie variables"
                 loading="lazy"
             >
 
@@ -343,12 +346,10 @@
                 </span>
 
                 <p>
-                    Vote count and popularity showed one of the
-                    strongest positive relationships in the numerical
-                    data, with a correlation of approximately 0.84.
-                    Budget and revenue were also strongly related,
-                    while ROI and sentiment showed much weaker
-                    linear relationships with the other variables.
+                    Correlation analysis was used to explore
+                    relationships among budget, revenue, audience
+                    engagement, popularity, ROI and sentiment-related
+                    variables.
                 </p>
 
             </div>
@@ -362,22 +363,21 @@
 
             <img
                 src="../assets/projects/oscar/budget-revenue.jpg"
-                alt="Budget versus revenue scatter plot for Oscar-winning films"
+                alt="Budget versus revenue of Oscar-winning films"
                 loading="lazy"
             >
 
             <div class="visual-caption">
 
                 <span>
-                    02 / FINANCIAL LANDSCAPE
+                    02 / BUDGET VS REVENUE
                 </span>
 
                 <p>
-                    Oscar-winning films showed substantial variation
-                    in budget and revenue. The distribution includes
-                    several high-revenue outliers across different
-                    genres, demonstrating that award-winning films
-                    occupy a wide financial range.
+                    The budget-versus-revenue analysis highlights
+                    the wide financial range represented among
+                    Oscar-winning films and shows several
+                    high-revenue outliers across genres.
                 </p>
 
             </div>
@@ -524,26 +524,27 @@
         </p>
 
 
+        <!-- RANDOM FOREST FEATURE IMPORTANCE -->
+
         <div class="case-visual">
 
             <img
                 src="../assets/projects/oscar/random-forest-feature-importance.jpg"
-                alt="Random Forest feature importance ranking"
+                alt="Random Forest feature importance analysis"
                 loading="lazy"
             >
 
             <div class="visual-caption">
 
                 <span>
-                    03 / RANDOM FOREST FEATURE IMPORTANCE
+                    03 / FEATURE IMPORTANCE
                 </span>
 
                 <p>
-                    Revenue and budget received the highest importance
-                    within this Random Forest model, followed by
-                    vote count, vote average and popularity.
-                    Sentiment, temporal variables and encoded genre
-                    features contributed additional information.
+                    Random Forest feature importance provides a
+                    model-specific view of how financial, audience,
+                    temporal, sentiment and categorical variables
+                    contributed to prediction.
                 </p>
 
             </div>
@@ -770,7 +771,7 @@
         </div>
 
 
-        <!-- TEMPORAL VISUAL -->
+        <!-- WINNERS BY DECADE -->
 
         <div class="case-visual">
 
@@ -787,11 +788,10 @@
                 </span>
 
                 <p>
-                    The number of winning-film records represented
-                    in the dataset varied substantially across
-                    release decades. This distribution reinforces
-                    the importance of considering time when
-                    interpreting historical award data.
+                    Release-decade analysis provides a historical
+                    view of how Oscar-winning film records are
+                    distributed across different periods represented
+                    in the dataset.
                 </p>
 
             </div>
@@ -854,14 +854,14 @@
             <div class="visual-caption">
 
                 <span>
-                    05 / CLASSIFICATION PERFORMANCE
+                    05 / CONFUSION MATRICES
                 </span>
 
                 <p>
-                    Confusion matrices were used to examine
-                    correct classifications alongside false
-                    positives and false negatives for individual
-                    models.
+                    Confusion matrices provide a more detailed
+                    view of classification behavior by separating
+                    correct predictions from false positives and
+                    false negatives.
                 </p>
 
             </div>
@@ -909,7 +909,7 @@
 
 
 <!-- =====================================
-     10 — WORKFLOW
+     10 — END-TO-END WORKFLOW
 ===================================== -->
 
 <section class="case-section">
