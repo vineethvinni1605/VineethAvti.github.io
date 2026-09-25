@@ -287,7 +287,81 @@
 
 </section>
 
+<!-- =====================================
+     EXPLORATORY ANALYSIS
+===================================== -->
 
+<section class="case-section">
+
+    <div class="case-section-number">
+        04
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            EXPLORATORY ANALYSIS
+        </p>
+
+        <h2>
+            Understanding the structure
+            behind the data.
+        </h2>
+
+        <p>
+            Exploratory analysis was used to examine relationships
+            between financial performance, audience engagement,
+            popularity and other numerical variables before modeling.
+        </p>
+
+        <div class="case-visual">
+
+            <img
+                src="../assets/projects/oscar/correlation-heatmap.jpg"
+                alt="Correlation heatmap of numerical movie features"
+                loading="lazy"
+            >
+
+            <div class="visual-caption">
+                <span>01 / CORRELATION ANALYSIS</span>
+
+                <p>
+                    Vote count and popularity showed a strong positive
+                    relationship, while budget and revenue were also
+                    strongly associated. ROI and sentiment showed much
+                    weaker linear relationships with the other numerical
+                    variables.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="case-visual">
+
+            <img
+                src="../assets/projects/oscar/budget-revenue.jpg"
+                alt="Budget versus revenue scatter plot for Oscar-winning films"
+                loading="lazy"
+            >
+
+            <div class="visual-caption">
+                <span>02 / FINANCIAL LANDSCAPE</span>
+
+                <p>
+                    Budget and revenue varied substantially across
+                    Oscar-winning films. The visualization also reveals
+                    high-revenue outliers and variation across genres,
+                    illustrating why financial scale alone cannot explain
+                    award outcomes.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =====================================
      MODELING
@@ -390,7 +464,61 @@
 
 </section>
 
+<!-- =====================================
+     FEATURE IMPORTANCE
+===================================== -->
 
+<section class="case-section">
+
+    <div class="case-section-number">
+        08
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            MODEL INTERPRETABILITY
+        </p>
+
+        <h2>
+            What did the Random Forest
+            pay attention to?
+        </h2>
+
+        <p>
+            Feature importance was examined to understand how individual
+            models used the available signals. In the Random Forest model,
+            financial variables ranked highly alongside audience-engagement
+            features such as vote count, vote average and popularity.
+        </p>
+
+        <div class="case-visual">
+
+            <img
+                src="../assets/projects/oscar/random-forest-feature-importance.jpg"
+                alt="Random Forest feature importance ranking"
+                loading="lazy"
+            >
+
+            <div class="visual-caption">
+
+                <span>03 / RANDOM FOREST FEATURE IMPORTANCE</span>
+
+                <p>
+                    Revenue and budget received the highest importance
+                    within this Random Forest model, followed by vote count,
+                    vote average and popularity. This model-specific view
+                    complements the broader feature analysis conducted
+                    across the project.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =====================================
      CATEGORY ANALYSIS
@@ -623,7 +751,45 @@
 
 </section>
 
+<div class="case-visual">
 
+    <div class="visual-caption">
+        <span>04 / CLASSIFICATION PERFORMANCE</span>
+
+        <p>
+            Confusion matrices provided a more detailed view of
+            classification behavior by showing correct predictions
+            alongside false positives and false negatives.
+        </p>
+    </div>
+
+    <div class="visual-grid">
+
+        <figure>
+            <img
+                src="../assets/projects/oscar/confusion-logistic.jpg"
+                alt="Logistic Regression confusion matrix"
+                loading="lazy"
+            >
+            <figcaption>
+                LOGISTIC REGRESSION
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img
+                src="../assets/projects/oscar/confusion-random-forest.jpg"
+                alt="Random Forest confusion matrix"
+                loading="lazy"
+            >
+            <figcaption>
+                RANDOM FOREST
+            </figcaption>
+        </figure>
+
+    </div>
+
+</div>
 
 <!-- =====================================
      PIPELINE

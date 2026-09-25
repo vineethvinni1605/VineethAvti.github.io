@@ -2869,3 +2869,91 @@ body {
     }
 
 }
+
+/* =====================================
+   OSCAR CASE STUDY VISUALS
+===================================== */
+
+.case-visual {
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.case-visual > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.visual-caption {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.visual-caption span {
+    color: #00c2ff;
+    font-family: monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+}
+
+.visual-caption p {
+    margin: 0;
+    max-width: 720px;
+}
+
+
+/* TWO-CHART MODEL GRID */
+
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.visual-grid figure {
+    margin: 0;
+}
+
+.visual-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.visual-grid figcaption {
+    margin-top: 14px;
+    color: #00c2ff;
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .case-visual {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .visual-caption {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .visual-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
