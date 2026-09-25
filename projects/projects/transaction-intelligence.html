@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Transaction Intelligence | Vineeth Avti
+    </title>
+
+    <meta
+        name="description"
+        content="Transaction anomaly detection system combining data quality validation, behavioral feature engineering, explainable risk flags and unsupervised machine learning."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="case-study-page">
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav class="case-nav">
+
+    <a href="../index.html" class="case-logo">
+        VA<span>.</span>
+    </a>
+
+    <a href="../index.html#projects" class="back-link">
+        ← BACK TO PROJECTS
+    </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section class="case-hero">
+
+    <div class="case-eyebrow">
+        02 / MACHINE LEARNING CASE STUDY
+    </div>
+
+    <h1>
+        Transaction
+        <span>Intelligence.</span>
+    </h1>
+
+    <p class="case-subtitle">
+        Building an end-to-end transaction analytics pipeline
+        to identify unusual financial behavior using data-quality
+        validation, behavioral features, explainable risk signals
+        and unsupervised machine learning.
+    </p>
+
+
+    <div class="case-metrics">
+
+        <div>
+            <strong>10K</strong>
+            <span>TRANSACTIONS</span>
+        </div>
+
+        <div>
+            <strong>500</strong>
+            <span>CUSTOMERS</span>
+        </div>
+
+        <div>
+            <strong>200</strong>
+            <span>ANOMALIES</span>
+        </div>
+
+        <div>
+            <strong>2%</strong>
+            <span>MODEL THRESHOLD</span>
+        </div>
+
+    </div>
+
+
+    <div class="case-tech">
+
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Scikit-learn</span>
+        <span>Isolation Forest</span>
+        <span>Anomaly Detection</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     01 — THE PROBLEM
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        01
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            THE PROBLEM
+        </p>
+
+        <h2>
+            How can unusual transaction
+            behavior be identified at scale?
+        </h2>
+
+        <p>
+            Financial transaction streams can contain patterns
+            that differ substantially from normal customer behavior.
+            Identifying those observations requires more than simply
+            applying a fixed transaction-value threshold.
+        </p>
+
+        <p>
+            Transaction Intelligence was designed as an end-to-end
+            analytics pipeline that evaluates transactions relative
+            to behavioral context while combining explainable
+            rules with unsupervised machine learning.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     02 — DATA
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        02
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            THE DATA
+        </p>
+
+        <h2>
+            Synthetic transaction data.
+            Real analytical workflow.
+        </h2>
+
+        <p>
+            The project uses synthetically generated financial
+            transaction data so the complete analytics workflow
+            can be developed without exposing real customer or
+            banking information.
+        </p>
+
+        <p>
+            The dataset contains 10,000 transactions representing
+            500 customers across multiple merchant categories and
+            transaction channels including Online, POS, Mobile
+            and ATM activity.
+        </p>
+
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>10,000</strong>
+                <span>TRANSACTIONS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>500</strong>
+                <span>CUSTOMERS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>4</strong>
+                <span>CHANNELS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>8</strong>
+                <span>MERCHANT CATEGORIES</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     03 — DATA QUALITY
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        03
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            DATA QUALITY
+        </p>
+
+        <h2>
+            Validate first.
+            Model second.
+        </h2>
+
+        <p>
+            Before behavioral analysis or machine learning,
+            the transaction data passes through a validation
+            and cleaning stage.
+        </p>
+
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Missing Values</h3>
+                <p>
+                    Validate required transaction and
+                    customer fields before processing.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Duplicates</h3>
+                <p>
+                    Detect duplicate transaction identifiers
+                    and remove duplicate records.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Amounts</h3>
+                <p>
+                    Identify invalid or non-positive
+                    transaction amounts.
+                </p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>Timestamps</h3>
+                <p>
+                    Convert transaction timestamps into
+                    consistent datetime representations.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     04 — FEATURE ENGINEERING
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        04
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            FEATURE ENGINEERING
+        </p>
+
+        <h2>
+            Turn individual transactions
+            into behavioral signals.
+        </h2>
+
+        <p>
+            Transaction values become more informative when they
+            are evaluated relative to each customer's typical
+            behavior. The feature-engineering stage therefore
+            combines transaction-level and customer-level signals.
+        </p>
+
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Temporal</h3>
+                <p>
+                    Transaction hour, day of week,
+                    weekend activity and late-night behavior.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Customer Behavior</h3>
+                <p>
+                    Customer average transaction amount,
+                    variability and transaction frequency.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Deviation</h3>
+                <p>
+                    Difference between the current transaction
+                    and the customer's typical spending.
+                </p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>Amount Ratio</h3>
+                <p>
+                    Transaction amount relative to the
+                    customer's average transaction value.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     05 — RISK SIGNALS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        05
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            EXPLAINABLE RISK SIGNALS
+        </p>
+
+        <h2>
+            Machine learning supported
+            by interpretable rules.
+        </h2>
+
+        <p>
+            Rule-based indicators provide additional context
+            around why a transaction may deserve attention.
+            These indicators complement the anomaly-detection
+            model rather than treating every unusual observation
+            as the same type of event.
+        </p>
+
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>HIGH_AMOUNT</h3>
+                <p>
+                    Transaction value substantially exceeds
+                    the customer's typical transaction amount.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>UNUSUAL_TIME</h3>
+                <p>
+                    Transaction occurs during the defined
+                    late-night activity window.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>ML_ANOMALY</h3>
+                <p>
+                    Isolation Forest identifies unusual behavior
+                    without another rule already explaining it.
+                </p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>NORMAL</h3>
+                <p>
+                    No rule-based risk condition is assigned
+                    to the transaction.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     06 — ANOMALY DETECTION
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        06
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            MACHINE LEARNING
+        </p>
+
+        <h2>
+            Detecting unusual behavior
+            without fraud labels.
+        </h2>
+
+        <p>
+            Isolation Forest was used as the unsupervised
+            anomaly-detection algorithm. This approach is useful
+            when labeled examples of confirmed fraud are not
+            available.
+        </p>
+
+        <p>
+            The model evaluates transaction amount, temporal
+            characteristics and customer behavioral features
+            to identify observations that differ substantially
+            from common patterns in the dataset.
+        </p>
+
+        <p class="method-note">
+            The Isolation Forest contamination parameter was set
+            to 2%. Therefore, the resulting anomaly rate reflects
+            the configured modeling assumption and should not be
+            interpreted as a measured fraud rate.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     07 — RESULTS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        07
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            RESULTS
+        </p>
+
+        <h2>
+            Anomalous transactions showed
+            substantially different value patterns.
+        </h2>
+
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>200</strong>
+                <span>DETECTED ANOMALIES</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>2.00%</strong>
+                <span>ANOMALY RATE</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>$51.26</strong>
+                <span>AVG NORMAL AMOUNT</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>$585.91</strong>
+                <span>AVG ANOMALOUS AMOUNT</span>
+            </div>
+
+        </div>
+
+
+        <p>
+            Under the configured model threshold, 200 of the
+            10,000 transactions were identified as anomalous.
+            Detected anomalies had an average transaction value
+            of $585.91 compared with $51.26 for transactions
+            classified as normal.
+        </p>
+
+        <p class="method-note">
+            These observations represent statistical anomalies,
+            not confirmed fraudulent transactions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     08 — RISK DISTRIBUTION
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        08
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            RISK DISTRIBUTION
+        </p>
+
+        <h2>
+            Explainability adds context
+            to anomaly detection.
+        </h2>
+
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>6,635</strong>
+                <span>NORMAL</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>2,790</strong>
+                <span>UNUSUAL TIME</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>542</strong>
+                <span>HIGH AMOUNT</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>33</strong>
+                <span>ML ANOMALY</span>
+            </div>
+
+        </div>
+
+        <p>
+            The rule layer provides a simple explanation for
+            different transaction behaviors. Transactions may
+            receive a behavioral risk label even when they are
+            not classified as anomalies by the Isolation Forest.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     09 — PIPELINE
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        09
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            END-TO-END WORKFLOW
+        </p>
+
+        <h2>
+            From raw transactions
+            to prioritized observations.
+        </h2>
+
+
+        <div class="case-pipeline">
+
+            <div>
+                <span>01</span>
+                GENERATE
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>02</span>
+                VALIDATE
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>03</span>
+                CLEAN
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>04</span>
+                ENGINEER
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>05</span>
+                DETECT
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>06</span>
+                ANALYZE
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     10 — LIMITATIONS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        10
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            LIMITATIONS
+        </p>
+
+        <h2>
+            Anomaly detection is not
+            the same as fraud detection.
+        </h2>
+
+        <p>
+            The project uses synthetic transaction data and does
+            not contain verified fraud labels. As a result, the
+            system identifies statistical and behavioral anomalies
+            rather than confirmed fraudulent activity.
+        </p>
+
+        <p>
+            The 2% anomaly rate is also influenced directly by
+            the Isolation Forest contamination setting. In a
+            production environment, thresholds would require
+            validation against historical outcomes and operational
+            review processes.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     11 — NEXT STEPS
+===================================== -->
+
+<section class="case-section">
+
+    <div class="case-section-number">
+        11
+    </div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">
+            NEXT STEPS
+        </p>
+
+        <h2>
+            Moving from prototype
+            toward a scalable risk system.
+        </h2>
+
+        <p>
+            Future iterations could introduce transaction-velocity
+            features, rolling behavioral windows, merchant-level
+            patterns and additional anomaly-detection techniques.
+        </p>
+
+        <p>
+            A later production-oriented version could also add
+            persistent data storage, model monitoring and an
+            interactive analytics layer for reviewing flagged
+            transactions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     NEXT PROJECT
+===================================== -->
+
+<section class="next-project">
+
+    <p>
+        EXPLORE MORE
+    </p>
+
+    <h2>
+        Oscar
+        <span>Intelligence →</span>
+    </h2>
+
+    <p class="next-status">
+        Machine Learning Case Study
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="case-footer">
+
+    <p>
+        © 2026 Vineeth Avti
+    </p>
+
+    <a href="../index.html">
+        BACK HOME ↑
+    </a>
+
+</footer>
+
+
+</body>
+
+</html>
