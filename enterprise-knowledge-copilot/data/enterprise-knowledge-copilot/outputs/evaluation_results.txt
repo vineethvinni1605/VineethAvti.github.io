@@ -1,0 +1,24 @@
+ENTERPRISE KNOWLEDGE COPILOT — EVALUATION RESULTS
+
+TEST 1 — GROUNDED QUESTION
+
+Question:
+How many PTO days can carry over?
+
+Answer:
+Unused PTO may carry over up to a maximum of five days.
+
+Result:
+PASS — Correct answer retrieved from the company knowledge base.
+
+
+TEST 2 — UNSUPPORTED QUESTION
+
+Question:
+What is the company's dental insurance policy?
+
+Answer:
+I could not find that information in the company knowledge base.
+
+Result:
+PASS — The system correctly avoided generating unsupported information.

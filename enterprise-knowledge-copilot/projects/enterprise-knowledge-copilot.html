@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enterprise Knowledge Copilot | Vineeth Avti</title>
+
+    <meta
+        name="description"
+        content="Enterprise RAG system using semantic retrieval and grounded LLM generation."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body class="case-study-page">
+
+
+<nav class="case-nav">
+
+    <a href="../index.html" class="case-logo">
+        VA<span>.</span>
+    </a>
+
+    <a href="../index.html#projects" class="back-link">
+        ← BACK TO PROJECTS
+    </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="case-hero">
+
+    <div class="case-eyebrow">
+        03 / GENERATIVE AI CASE STUDY
+    </div>
+
+    <h1>
+        Enterprise Knowledge
+        <span>Copilot.</span>
+    </h1>
+
+    <p class="case-subtitle">
+        Building a Retrieval-Augmented Generation system
+        that retrieves enterprise knowledge before generating
+        grounded answers with an LLM.
+    </p>
+
+    <div class="case-metrics">
+
+        <div>
+            <strong>6</strong>
+            <span>POLICY AREAS</span>
+        </div>
+
+        <div>
+            <strong>TOP 3</strong>
+            <span>CHUNKS RETRIEVED</span>
+        </div>
+
+        <div>
+            <strong>500</strong>
+            <span>CHUNK SIZE</span>
+        </div>
+
+        <div>
+            <strong>2/2</strong>
+            <span>EVALUATION TESTS</span>
+        </div>
+
+    </div>
+
+
+    <div class="case-tech">
+        <span>Python</span>
+        <span>OpenAI API</span>
+        <span>Sentence Transformers</span>
+        <span>Embeddings</span>
+        <span>Semantic Search</span>
+        <span>RAG</span>
+    </div>
+
+</section>
+
+
+
+<!-- 01 PROBLEM -->
+
+<section class="case-section">
+
+    <div class="case-section-number">01</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">THE PROBLEM</p>
+
+        <h2>
+            How can an LLM answer questions
+            using approved enterprise knowledge?
+        </h2>
+
+        <p>
+            General-purpose language models can generate useful
+            responses, but enterprise questions often need answers
+            grounded in specific internal policies and documents.
+        </p>
+
+        <p>
+            Enterprise Knowledge Copilot uses Retrieval-Augmented
+            Generation to retrieve relevant company knowledge before
+            asking the language model to generate a response.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 02 KNOWLEDGE BASE -->
+
+<section class="case-section">
+
+    <div class="case-section-number">02</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">KNOWLEDGE BASE</p>
+
+        <h2>
+            A synthetic enterprise
+            policy library.
+        </h2>
+
+        <p>
+            A fictional enterprise knowledge base was created so
+            the complete RAG workflow could be developed without
+            exposing confidential company information.
+        </p>
+
+        <div class="feature-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Remote Work</h3>
+                <p>Hybrid work and remote-access policies.</p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Paid Time Off</h3>
+                <p>PTO allocation, approval and carry-over rules.</p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Security</h3>
+                <p>Authentication and information-security guidance.</p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <h3>AI Usage</h3>
+                <p>Rules for responsible use of AI systems.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 03 CHUNKING -->
+
+<section class="case-section">
+
+    <div class="case-section-number">03</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">DOCUMENT PROCESSING</p>
+
+        <h2>
+            Preparing enterprise knowledge
+            for retrieval.
+        </h2>
+
+        <p>
+            The source document is divided into overlapping
+            text chunks before retrieval.
+        </p>
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>500</strong>
+                <span>CHARACTER CHUNK</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>100</strong>
+                <span>CHARACTER OVERLAP</span>
+            </div>
+
+        </div>
+
+        <p>
+            Overlap preserves context across chunk boundaries
+            while keeping individual retrieval units relatively
+            focused.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 04 EMBEDDINGS -->
+
+<section class="case-section">
+
+    <div class="case-section-number">04</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">EMBEDDINGS</p>
+
+        <h2>
+            Moving beyond
+            keyword matching.
+        </h2>
+
+        <p>
+            Document chunks and user questions are converted into
+            vector embeddings using the all-MiniLM-L6-v2 Sentence
+            Transformer model.
+        </p>
+
+        <p>
+            This representation allows the retrieval layer to compare
+            questions and policy content based on semantic similarity
+            rather than exact keyword matches.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 05 RETRIEVAL -->
+
+<section class="case-section">
+
+    <div class="case-section-number">05</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">SEMANTIC RETRIEVAL</p>
+
+        <h2>
+            Retrieve the most relevant
+            knowledge first.
+        </h2>
+
+        <p>
+            Cosine similarity compares the question embedding
+            against the document embeddings.
+        </p>
+
+        <p>
+            The three highest-scoring chunks are selected and
+            assembled into the context supplied to the language model.
+        </p>
+
+        <div class="data-stat-grid">
+
+            <div class="data-stat">
+                <strong>TOP 3</strong>
+                <span>RETRIEVED CHUNKS</span>
+            </div>
+
+            <div class="data-stat">
+                <strong>COSINE</strong>
+                <span>SIMILARITY</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 06 GROUNDED GENERATION -->
+
+<section class="case-section">
+
+    <div class="case-section-number">06</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">GROUNDED GENERATION</p>
+
+        <h2>
+            Retrieve first.
+            Generate second.
+        </h2>
+
+        <p>
+            Retrieved policy context is passed to an OpenAI language
+            model together with the employee's question.
+        </p>
+
+        <p>
+            The generation instructions restrict the model to the
+            supplied company knowledge. When the answer is unavailable,
+            the system is instructed to say that the information could
+            not be found.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 07 EVALUATION -->
+
+<section class="case-section">
+
+    <div class="case-section-number">07</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">EVALUATION</p>
+
+        <h2>
+            Testing grounded answers
+            and unsupported questions.
+        </h2>
+
+
+        <div class="model-grid">
+
+            <div class="model-card highlight-model">
+
+                <span>TEST 01</span>
+
+                <h3>Grounded Question</h3>
+
+                <p>
+                    “How many PTO days can carry over?”
+                </p>
+
+                <p>
+                    The system retrieved the relevant PTO policy
+                    and correctly answered that unused PTO may
+                    carry over up to five days.
+                </p>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <span>TEST 02</span>
+
+                <h3>Unsupported Question</h3>
+
+                <p>
+                    “What is the company's dental insurance policy?”
+                </p>
+
+                <p>
+                    Because dental insurance information was not
+                    present in the knowledge base, the system
+                    correctly returned the configured fallback
+                    response instead of inventing an answer.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 08 PIPELINE -->
+
+<section class="case-section">
+
+    <div class="case-section-number">08</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">RAG PIPELINE</p>
+
+        <h2>
+            From enterprise documents
+            to grounded answers.
+        </h2>
+
+        <div class="case-pipeline">
+
+            <div>
+                <span>01</span>
+                DOCUMENTS
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>02</span>
+                CHUNKS
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>03</span>
+                EMBEDDINGS
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>04</span>
+                RETRIEVE
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>05</span>
+                LLM
+            </div>
+
+            <i>→</i>
+
+            <div>
+                <span>06</span>
+                ANSWER
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 09 LIMITATIONS -->
+
+<section class="case-section">
+
+    <div class="case-section-number">09</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">LIMITATIONS</p>
+
+        <h2>
+            A working RAG prototype,
+            not a production knowledge platform.
+        </h2>
+
+        <p>
+            The current knowledge base is intentionally small and
+            synthetic. Evaluation currently consists of a limited
+            set of manually tested questions.
+        </p>
+
+        <p>
+            A production implementation would require larger-scale
+            document ingestion, stronger evaluation, access controls,
+            retrieval monitoring and additional security safeguards.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 NEXT STEPS -->
+
+<section class="case-section">
+
+    <div class="case-section-number">10</div>
+
+    <div class="case-section-content">
+
+        <p class="case-label">NEXT STEPS</p>
+
+        <h2>
+            From prototype to
+            enterprise-ready retrieval.
+        </h2>
+
+        <p>
+            Future iterations could introduce persistent vector
+            storage, document metadata, source-level citations,
+            retrieval evaluation and a conversational user interface.
+        </p>
+
+        <p>
+            The evaluation suite could also be expanded with larger
+            question sets to measure retrieval quality and grounded
+            answer accuracy systematically.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT PROJECT -->
+
+<section class="next-project">
+
+    <p>EXPLORE MORE</p>
+
+    <h2>
+        Transaction
+        <span>Intelligence →</span>
+    </h2>
+
+    <p class="next-status">
+        Machine Learning / Risk Analytics
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer class="case-footer">
+
+    <p>© 2026 Vineeth Avti</p>
+
+    <a href="../index.html">
+        BACK HOME ↑
+    </a>
+
+</footer>
+
+
+</body>
+</html>

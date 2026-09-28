@@ -1,0 +1,75 @@
+NEXORA TECHNOLOGIES — ENTERPRISE KNOWLEDGE BASE
+
+========================================
+REMOTE WORK POLICY
+========================================
+
+Nexora Technologies follows a hybrid work model.
+
+Employees may work remotely up to three days per week. Teams determine their in-office collaboration days based on project requirements.
+
+Employees working remotely must use company-approved devices and connect to internal systems through the corporate VPN.
+
+Employees should remain available during core collaboration hours from 10:00 AM to 3:00 PM local time.
+
+========================================
+PAID TIME OFF POLICY
+========================================
+
+Full-time employees receive 20 days of paid time off per calendar year.
+
+PTO requests of three consecutive business days or more should be submitted at least two weeks in advance.
+
+Managers are responsible for approving PTO requests based on project coverage and team availability.
+
+Unused PTO may carry over into the following year up to a maximum of five days.
+
+========================================
+INFORMATION SECURITY POLICY
+========================================
+
+Employees must use multi-factor authentication when accessing company systems.
+
+Passwords must not be shared with coworkers or stored in unsecured documents.
+
+Confidential company information must only be stored in approved enterprise systems.
+
+Suspected phishing emails should be reported to the Security Operations team.
+
+Company data must not be uploaded to unapproved third-party AI tools or external storage services.
+
+========================================
+EXPENSE REIMBURSEMENT POLICY
+========================================
+
+Employees may request reimbursement for approved business expenses.
+
+Expense reports should be submitted within 30 days of the purchase date.
+
+Receipts are required for individual expenses greater than $25.
+
+Business travel must receive manager approval before booking.
+
+========================================
+AI USAGE POLICY
+========================================
+
+Employees may use company-approved AI tools for research, summarization, software development and productivity tasks.
+
+Confidential customer information, employee personal information and proprietary company data must not be entered into public AI systems.
+
+AI-generated content must be reviewed by an employee before being used for business decisions or external communication.
+
+Employees remain responsible for the accuracy and appropriateness of AI-assisted work.
+
+========================================
+TECHNICAL SUPPORT
+========================================
+
+Employees experiencing account access problems should contact the IT Service Desk.
+
+Security incidents, suspicious account activity and suspected phishing attempts should be reported to the Security Operations team.
+
+Critical production incidents should be escalated through the engineering incident-response process.
+
+Standard technical-support requests should include the employee's department, device type, issue description and relevant error messages.
